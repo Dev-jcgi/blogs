@@ -1,0 +1,37 @@
+# OPTIMIZATION OF AN EMG PATTERN RECOGNITION SYSTEM BY A SELECTION METHODOLOGY OF ELECTRODE POSITION USING FFT AND ANN ALGORITHMS
+
+**Juan Carlos González Ibarra**.  
+Centro de Investigación y Estudios de Posgrado (CIEP) de la Facultad de Ingeniería Universidad Autónoma de San Luis Potosí (UASLP).  
+Dr. Manuel Nava No 8, C. P. 78290, San Luis Potosí S.L.P. México  
+Email: jcgi.laboral@gmail.com
+
+## I. INTRODUCTION
+
+One of the modern challenges in Biomedical Engineering is to design and build a system that may be used as a man-machine interface for people who have suffered amputations of their upper or lower extremities or that present motor disabilities. This system must be able to recognize and appropriately respond to the person’s desired movements using superficial electrodes as a means of communication or sensing, which are placed in the remaining muscles of the person’s amputated extremity or in strategic positions in the case of people with motor disabilities. The signals that the system must acquire, process, and analyze are the electric potentials from the neuromuscular activity, better known as electromyographic (EMG) signals; these signals present amplitudes that vary from micro to milli volts and a bandwidth from 10 to 1000 Hz [1]. 
+
+There have been great advances in the study of EMG signals, especially in the electric device control applications focused on the rehabilitation of people with amputations through the implementation of myoelectric prostheses in arms [2,3]. These systems use a simple codification scheme of the EMG signal amplitude in order to activate one or more of the prosthesis devices such as the elbow, wrist, or hand. Although these systems have been successful, they do not provide enough information to reliably and intuitively control more than one function or multiple functions of the myoelectric prosthesis, which is a problem yet to be solved. One of the techniques that may help solve this problem is applying pattern recognition to the EMG signal processing and analysis [4]. Some of the methods that have been more successful in recognizing or classifying EMG signals include: Bayesian systems [5], artificial neural networks (ANN) [6, 7], Markov maps [8], and fuzzy logic [9].
+
+In this research, an economical EMG system was developed with the idea of assembling it in an embedded device in the near future. The EMG pattern recognition was optimized through a selection methodology of the ideal electrode positions using Fourier’s fast transformation (FFT) and ANN algorithms.
+
+## RESULTS AND DISCUSSION
+
+The experiments were performed in 20 persons of different ages: 6 children (10-14 years), 7 young (17-28 years), and 7 adults (30-50 years). As explained in the methodology, the experiment starts by selecting a position for the electrode B, while electrode A remains in place, as shown in Figure 1(b). Figures 2(a) and 2(b) show the spectra of intensity versus frequency for the movements of forearm pronation and hand grasp, with the electrode B at position 8 (triceps vastus medialis, just above the radial nerve, Figure 1 (b)). These spectra were obtained using the FFT for periods of 1 second with a sampling rate of 10 kHz. We reviewed how similar the movements' spectra are in order to determine if the position of electrode B is suitable for EMG pattern recognition. If the spectra are very similar, it is probable that ANNs do not perform recognition correctly. As observed in Figures 2(a) and 2(b), the spectra are different. Making a thorough review of all spectra for different movements in the positions 1 to 8 of the electrode B, the positions 3 and 7 were discarded due to their spectra being very similar. Nevertheless, the ANNs showed that positions 3 and 7 are not suitable for recognition.
+
+## ACKNOWLEDGEMENTS
+
+This work was supported by PROMEP: UASLP-PTC-363 and FAI: C12-FAI-03-59.59 of the UASLP, México.
+
+## REFERENCES
+
+1. A. Ashok, “Procesamiento de Señales Analógicas y Digitales” 3rd ed., Thomson, 1999.
+2. P. A. Parker and R. N. Scott, “Myoelectric control of prostheses,” *CRC Crit. Rev. Biomed. Eng.*, vol. 13, no. 4, pp. 283–310, 1986.
+3. K. Englehart and B. Hudgins, “A robust, real-time control scheme for multifunction myoelectric control,” *IEEE Trans. Biomed. Eng.*, vol. 50, no. 7, pp. 848–854, 2003.
+4. K. Englehart, B. Hudgins, and A. D. C. Chan, “Continuous Multifunction Myoelectric Control using Pattern Recognition,” *Technology and Disability*, vol. 15, no. 2, pp. 95-103, 2003.
+5. K. Englehart, B. Hudgins, P. A. Parker, and M. Stevenson, “Classification of the myoelectric signal using time-frequency based representations,” *Med. Eng. Phy.* (Special Issue: Intelligent Data Analysis in Electromyography and Electroneurography), vol. 21, pp. 431–438, 1999.
+6. B. S. Hudgins, P. A. Parker, and R. N. Scott, “A new strategy for multifunction myoelectric control,” *IEEE Trans. Biomed. Eng.*, vol. 40, no. 1, pp. 82–94, 1993.
+7. C. Christodoulou and C. S. Pattichis, “A new technique for the classification and decomposition of EMG signals,” in *Proc. 1995 IEEE Int. Conf. Neural Networks*, New York, vol. 5, pp. 2303–2308, 1995.
+8. A. D. C. Chan and K. Englehart, “Continuous myoelectric control for powered prostheses using hidden Markov models,” *IEEE Trans. Biomed. Eng.*, vol. 52, no. 1, pp. 121–124, 2005.
+9. R. F. Weir and A. B. Ajiboye, “A multifunction prosthesis controller based on fuzzy-logic techniques,” in *Proc. 25th Silver Anniversary Int. Conf. IEEE Engineering in Medicine and Biology Society (EMBS)*, Cancun, Mexico, 2003.
+10. [http://www.seniam.org](http://www.seniam.org)
+11. D. Dumitru, A. Gitter “A. Nerve and muscle anatomy and Physiology,” *Electrodiagnosis Medicine*, Philadelphia: Hanley and Belfus; pp. 3–26, 2002.
+12. G. Yang, “Study of Emotion Recognition Based on Surface Electromyography and Improved Least Squares Support Vector Machine,” *J. of computers*, vol. 6, no. 8, 2011.
