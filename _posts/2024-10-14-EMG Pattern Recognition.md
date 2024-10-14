@@ -1,4 +1,4 @@
-## Abstract
+## EMG PATTERN RECOGNITION SYSTEM
 In this document, we present a methodology for movement pattern recognition from arm-forearm myoelectric signals, starting off from the design and implementation of an electromyography (EMG) instrumentation system, considering the Surface EMG for the Non-Invasive Assessment of Muscles (SENIAM) rules. Signal processing and characterization techniques were applied using the pass-band Butterworth digital filter and fast Fourier transform (FFT). Artificial neural networks (ANN) such as back propagation and radial basis function (RBF) were used for the pattern recognition or classification of the EMG signals. The best results were obtained using the RBF ANN, achieving an average accuracy of 98%.
 
 **Published in:** 2012 11th Mexican International Conference on Artificial Intelligence  
