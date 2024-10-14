@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
-<link href="/css/override.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/toolbar.css" rel="stylesheet" type="text/css"> <!-- Link to toolbar.css -->
+<link href="/css/override.css" rel="stylesheet" type="text/css"> <!-- Existing override.css if needed -->
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
+  <header class="post-header container-bar"> <!-- Adapted header with toolbar styling -->
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -13,15 +15,18 @@ layout: default
       </time>
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-      {%- endif -%}</p>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ author }}</span>
+        </span>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="share-links">
     {% include sharelinks.html %}
   </div>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content bar-section" itemprop="articleBody"> <!-- Added 'bar-section' class for toolbar styling -->
     {{ content }}
     {% include navlinks.html %}
   </div>
